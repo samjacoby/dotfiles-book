@@ -40,7 +40,7 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
-
+set backspace=2
 
 " Status line
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
@@ -70,3 +70,6 @@ nmap <leader>R :RainbowParenthesesToggle<CR>
 "au BufNewFile,BufRead *.less set nocursorline
 
 cmap w!! w !sudo tee >/dev/null %
+
+" Vim 7.3 (MacPorts) Delete/Backspace Fix
+:fixdel
